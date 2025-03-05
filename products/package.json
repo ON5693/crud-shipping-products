@@ -1,0 +1,43 @@
+{
+  "name": "crud-products",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "src/server.ts",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "npx tsx src/server.ts",
+    "build": "rm -rf ./build/ && tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "nodemon --exec npx tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/swagger": "^9.4.2",
+    "@fastify/swagger-ui": "^5.2.2",
+    "cep-distance": "^1.0.2",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "mongoose": "^8.11.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.26.0",
+    "@faker-js/faker": "^9.5.1",
+    "@shelf/jest-mongodb": "^4.3.2",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.8",
+    "eslint": "^9.21.0",
+    "jest": "^29.7.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^3.5.2",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
