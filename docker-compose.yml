@@ -1,6 +1,31 @@
 version: '3.8'
 services:
 
+  orders:
+    build: ./orders
+    container_name: orders
+    ports:
+      - 3005:3005
+    env_file:
+      - orders/.env
+    depends_on:
+      - products
+    networks:
+      - api_network
+
+  products:
+    build: ./products
+    container_name: products
+    ports:
+      - 3000:3000
+    env_file:
+      - products/.env
+    depends_on:
+      - mongo
+    networks:
+      - mongo_compose_network
+      - api_network
+
   mongo-express:
     image: mongo-express
     ports:
@@ -38,6 +63,8 @@ services:
 
 networks: 
     mongo_compose_network:
+      driver: bridge
+    api_network:
       driver: bridge
 
 volumes:
