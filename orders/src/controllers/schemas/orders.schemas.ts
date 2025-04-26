@@ -1,6 +1,6 @@
 export const addOrderSchema = {
 	description: 'Adding order for a product',
-	tags: ['products'],
+	tags: ['orders'],
 	summary: 'Adding a order',
 	body: {
 		type: 'object',
